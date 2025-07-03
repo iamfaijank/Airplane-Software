@@ -16,7 +16,9 @@
   "amended_from",
   "duration_of_flight",
   "status",
-  "add_ons"
+  "add_ons",
+  "flight_price",
+  "total_amount"
  ],
  "fields": [
   {
@@ -99,13 +101,24 @@
    "fieldtype": "Table",
    "label": "Add-ons",
    "options": "Airplane Ticket Add-on Item"
+  },
+  {
+   "fieldname": "flight_price",
+   "fieldtype": "Currency",
+   "label": "Flight Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-03 13:45:17.665243",
+ "modified": "2025-07-03 13:57:20.529158",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
