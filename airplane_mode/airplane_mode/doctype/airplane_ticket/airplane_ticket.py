@@ -4,6 +4,8 @@
 
 import frappe
 from frappe.model.document import Document
+import random
+
 
 class AirplaneTicket(Document):
 	def validate(self):
@@ -26,3 +28,14 @@ class AirplaneTicket(Document):
 	def before_submit(self):
 		if self.status != "Boarded":
 			frappe.throw("Only tickets with status 'Boarded' can be submitted.")
+
+	def before_insert(self):
+		# Generate random seat (e.g., 89E)
+		number = random.randint(1, 99)
+		letter = random.choice(['A', 'B', 'C', 'D', 'E'])
+		self.seat = f"{number}{letter}"
+
+	def on_submit(self):
+		# Set linked Airplane Flight status to "Completed"
+		if self.seat:
+			frappe.db.set_value("Airplane Flight", self.seat)
