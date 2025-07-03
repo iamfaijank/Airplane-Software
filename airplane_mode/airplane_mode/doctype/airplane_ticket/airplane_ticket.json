@@ -15,7 +15,8 @@
   "departure_time",
   "amended_from",
   "duration_of_flight",
-  "status"
+  "status",
+  "add_ons"
  ],
  "fields": [
   {
@@ -92,13 +93,19 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Booked\nChecked-In\nBoarded"
+  },
+  {
+   "fieldname": "add_ons",
+   "fieldtype": "Table",
+   "label": "Add-ons",
+   "options": "Airplane Ticket Add-on Item"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-03 12:32:36.255058",
+ "modified": "2025-07-03 13:45:17.665243",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
