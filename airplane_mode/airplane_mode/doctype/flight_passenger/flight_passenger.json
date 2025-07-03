@@ -7,7 +7,8 @@
  "field_order": [
   "first_name",
   "last_name",
-  "date_of_birth"
+  "date_of_birth",
+  "full_name"
  ],
  "fields": [
   {
@@ -28,12 +29,18 @@
    "in_list_view": 1,
    "label": "Date Of Birth",
    "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.first_name && doc.last_name\n",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-03 10:33:08.141720",
+ "modified": "2025-07-03 13:11:37.281034",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Flight Passenger",
