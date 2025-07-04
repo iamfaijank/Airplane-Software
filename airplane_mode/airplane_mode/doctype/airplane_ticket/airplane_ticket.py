@@ -28,6 +28,7 @@ class AirplaneTicket(Document):
 	def before_submit(self):
 		if self.status != "Boarded":
 			frappe.throw("Only tickets with status 'Boarded' can be submitted.")
+			frappe
 
 	def before_insert(self):
 		# Generate random seat (e.g., 89E)
